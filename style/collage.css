@@ -1,0 +1,39 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+.row {
+  height: 400px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.row > div {
+  flex: 1;
+}
+.vertical-collage {
+  height: calc((100% - 1%)/2);
+}
+.box-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+/* Smaller Device */
+@media screen and (max-width:570px){
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    .box-collage{
+        grid-template-columns: 1fr;
+    }
+}
+/* Medium Device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+    
+}
